@@ -22,5 +22,13 @@ namespace TestProject1
             string mood = moodAnalysis.AnalyseMethod();
             Assert.AreEqual(mood, "happy");
         }
+        [TestMethod]
+        [DataRow("null")]
+        public void GivenNullInput_WhenTestMoodAnalysis_shouldReturnHappy(string message)
+        {
+            MoodAnalyzer moodAnalysis = new MoodAnalyzer(message);
+            string mood = moodAnalysis.AnalyseMethod();
+            Assert.AreEqual(mood, "happy");
+        }
     }
 }
