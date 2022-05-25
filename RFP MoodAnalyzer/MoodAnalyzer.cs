@@ -9,6 +9,10 @@ namespace RFP_MoodAnalyzer
     public class MoodAnalyzer
     {
         string message;
+        public MoodAnalyzer()
+        {
+
+        }
         public MoodAnalyzer(string message)
         {
             this.message = message;
